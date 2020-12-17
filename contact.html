@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>券村Cardo-聯絡我們</title>
+    <meta name="description" content="券村Cardo提供各式服務及商品之電子票券，種類豐富多元，凡生活會使用到的相關票券都可以在券村裡找到。不限時間不限地點，購買立即享受各種優惠服務。">
+    <meta name="keywords"
+        content="Cardo, 電子票券, 區塊鏈, 永豐, 寬宏藝術, 餐廳飲品, 休閒玩樂, 藝文展覽, 旅遊住宿, 美容舒壓, 永豐銀行, 永豐紙業, 票券, 信託, 價金保管, 券村Cardo, 券村卡多">
+    <meta property="fb:app_id" content="2792392587673178">
+    <meta property="og:title" content="券村Cardo">
+    <meta property="og:image" content="https://cardo-web.sakilu.com/download.png">
+    <meta property="og:url" content="https://m.yfpcardo.com/#/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="券村Cardo提供各式服務及商品之電子票券，種類豐富多元，凡生活會使用到的相關票券都可以在券村裡找到。不限時間不限地點，購買立即享受各種優惠服務。">
+    <meta property="og:site_name" content="券村Cardo">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="券村Cardo">
+    <meta property="twitter:image" content="https://cardo-web.sakilu.com/download.png">
+    <meta name="twitter:image:alt" content="logo">
+    <meta name="twitter:site" content="@username">
+    <meta name="twitter:creator" content="@username">
+    <meta property="twitter:description"
+        content="券村Cardo提供各式服務及商品之電子票券，種類豐富多元，凡生活會使用到的相關票券都可以在券村裡找到。不限時間不限地點，購買立即享受各種優惠服務。">
+    <meta property="twitter:site_name" content="券村Cardo">
+    <meta name="google-site-verification" content="lK9YG_YpdzChlswVJ_w938muOv6aHmRlwiRvYGwo3Ps">
+    <meta itemprop="name" content="券村Cardo">
+    <meta itemprop="description" content="券村Cardo提供各式服務及商品之電子票券，種類豐富多元，凡生活會使用到的相關票券都可以在券村裡找到。不限時間不限地點，購買立即享受各種優惠服務。">
+    <meta itemprop="image" content="https://cardo-web.sakilu.com/download.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        a {
+            color: #FFFFFF;
+        }
+
+        a:hover {
+            color: #2699FB;
+        }
+
+        h1 {
+            font: normal normal bold 22px/12px Arial;
+            color: #FFFFFF;
+        }
+
+        p {
+            color: #FFFFFF;
+        }
+
+        #app {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body id="home" style="padding-top: 55px;">
+    <!-- 主內容 -->
+    <div class="container-fluid">
+
+        <!--選單-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top align-items-center" style="background-color: #002b60">
+            <!--fixed-top 鎖定在畫面最上面，align-items-center 垂直對齊-->
+
+            <div class="navbar-brand ml-lg-5 ml-2 " href="#">
+                <!--LOGO圖-->
+                <a id="logo" href="#home" title="券村Cardo">
+                    <img src="./img/icon_logo.png" style="max-height: 3vh;" alt="券村Cardo">
+                </a>
+
+            </div>
+
+            <!--小畫面的選單按鈕-->
+            <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 選單 -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <!--justify-content-end 靠右對齊-->
+                <div class="navbar-nav align-items-center" style="font-size: 18px; font: bold Arial;">
+                    <a class="nav-item nav-link mr-lg-5" href="./index.html">我是用戶</a>
+                    <a class="nav-item nav-link mr-lg-5" href="./index2.html">我是商家</a>
+                    <a class="nav-item nav-link mr-lg-5" href="#">常見問題</a>
+                    <a class="nav-item nav-link mr-lg-5 active" href="./contact.html">聯絡我們</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="allmain" class="row justify-content-center text-center"
+            style="background-image:url('./img/Landing page-contact2x.png'); background-size: cover; background-position:center;">
+
+            <div class="col-12 col-lg-5 col-md-9 col-sm-10 p-4 p-sm-5">
+                <h1>聯絡我們</h1>
+                <p>請留下您的基本資料，我們會有專人儘速與您聯繫。</p>
+                <div id="app">
+                    <input type="text" id="name" class="form-control w-100 rounded-0 my-2" placeholder="姓名"
+                        v-model="name">
+                    <input type="text" id="industry" class="form-control w-100 rounded-0 my-2"
+                        placeholder="產業類別（若您是一般消費者請略過）" v-model="industry">
+                    <input type="text" id="company" class=" form-control w-100 rounded-0 my-2"
+                        placeholder="公司名稱（若您是一般消費者請略過）" v-model="company">
+                    <input type="tel" id="phone" class="form-control w-100 rounded-0 my-2" placeholder="連絡電話"
+                        v-model="phone">
+                    <input type="email" id="email" class="form-control w-100 rounded-0 my-2" placeholder="電子信箱"
+                        v-model="email">
+                    <textarea name="" id="content" cols="30" rows="10" class="form-control w-100 rounded-0 my-2"
+                        placeholder="請輸入您想了解的內容..." v-model="content"></textarea>
+                    <button id="btn" class="btn btn-primary" @click="send">送出</button>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class=" row justify-content-center d-lg-none" style="background-color: #010101;">
+
+            <div class="col-6 p-2 pl-5 mt-3">
+                <button type="button" class="btn btn-block btn-secondary text-center"
+                    style="background-color: rgba(255, 255, 255, 0.13); border:0px"
+                    onclick="location.href='./index.html'">
+                    <img src="./img/icon_shop.png" class="p-1" style="width: 30px;">
+                    <span style="font-size: 14px;">&ensp;我是用戶</span>
+                </button>
+            </div>
+
+            <div class="col-6 p-2 pr-5 mt-3">
+                <button type="button" class="btn btn-block btn-secondary text-center"
+                    style="background-color: rgba(255, 255, 255, 0.13); border:0px"
+                    onclick="location.href='./index2.html'">
+                    <img src="./img/icon_shop.png" class="p-1" style="width: 30px;">
+                    <span style="font-size: 14px;">&ensp;我是商家</span>
+                </button>
+            </div>
+
+            <div class="col-6 p-2 pl-5 mb-3">
+                <button id="btn_to_pc" type="button" class="btn btn-block btn-secondary text-center"
+                    style="background-color: rgba(255, 255, 255, 0.13); border:0px">
+                    <img src="./img/icon_pc.png" class="p-1" style="width: 30px;">
+                    <span style="font-size: 14px;">&ensp;PC網頁版</span>
+                </button>
+            </div>
+
+            <div class="col-6 p-2 pr-5 mb-3">
+                <button type="button" class="btn btn-block btn-secondary text-center"
+                    style="background-color: rgba(255, 255, 255, 0.13); border:0px">
+                    <img src="./img/icon_sent.png" class="p-1" style="width: 30px;">
+                    <span style="font-size: 14px;" onclick="location.href='./contact.html'">&ensp;聯絡我們</span>
+                </button>
+            </div>
+
+
+        </div>
+        <div class=" row justify-content-center d-lg-none py-2" style="background-color: #ffffff;">
+            <div class="col-5">
+                <img src="./img/cardo_logo.png" style="width: 100%;" alt="Cardo">
+            </div>
+            <div class="w-100 "></div>
+            <div class="col-12 my-1 text-center">
+                <span style="font-size: 5px; color: #002B60;">Copyright © 2020 YUEN FOONG PAPER CO.,LTD.</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 相關連結 -->
+    <div class="container-fluid " style="font-size: 12px; background-color: black;">
+
+        <!-- pc 相關連結 -->
+        <div class="row d-none d-lg-flex justify-content-center px-lg-5 pt-lg-5 "
+            style="max-width: 1500px; margin: auto;">
+            <!-- 1 -->
+            <div class="col-3 " style="color: #FFFFFF;">
+                <ul class="nav flex-column my-5  ">
+                    <li class="nav-item">
+                        <span class="nav-link active" style="font-size: 20px;font-weight:bold" href="#">券村 Cardo</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">功能說明</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">用戶專區</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index2.html">商家專區</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://m.yfpcardo.com/#/">網頁版</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">常見問題</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 2 -->
+            <div class="col-3 " style="color: #FFFFFF;">
+                <ul class="nav flex-column my-5 ">
+                    <li class="nav-item">
+                        <span class="nav-link" style="font-size: 20px;font-weight:bold" href="#">公司</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.yfp.com.tw/">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.104.com.tw/company/hgrs6jc?jobsource=hi">工作機會</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 3 -->
+            <div class="col-3 " style="color: #FFFFFF;">
+                <ul class="nav flex-column my-5  ">
+                    <li class="nav-item">
+                        <span class="nav-link" style="font-size: 20px;font-weight:bold" href="#">支援服務</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link disabled" href="#">說明中心</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./contact.html">聯絡我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://m.yfpcardo.com/#/login/useAndPrivacyTerm">使用者條款與隱私權政策</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 4 -->
+            <div class="col-3 " style="color: #FFFFFF; ">
+                <ul class="nav flex-column my-5 ">
+                    <li class="nav-item">
+                        <span class="nav-link" style="font-size: 20px;font-weight:bold" href="#">社群關注</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/Cardo.Ticket">FaceBook</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link disabled" href="#">Instagram</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_to_pc").click(function () {
+                $('head').append('<meta name="viewport" content="width=1280, initial-scale=0.1, shrink-to-fit=no">');
+            });
+        });
+
+
+    </script>
+    <script>
+        $(function () {
+
+            $("a[href^='#']").on('click', function (e) {
+
+                var $target = $($(this).attr("href"));
+
+                if ($target.length) {
+                    e.preventDefault();
+                    $("html, body").animate({
+                        scrollTop: $target.offset().top
+                    }, 1000);
+                }
+            });
+
+            return false;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script>
+        var app = new Vue({ //建立new Vue並放入一個物件
+            el: '#app',    // HTML用來與Vue應用程式綁定的方法，也可用class綁定
+            data: {    //data後面也是跟著一個物件
+                name: '',
+                phone: '',
+                industry: '',
+                company: '',
+                email: '',
+                content: ''
+            },
+            methods: {
+                send: function () {
+                    const vm = this;
+                    $.ajax({
+                        type: 'GET',
+                        url: "https://cors-anywhere.herokuapp.com/script.google.com/macros/s/AKfycbz4tzqRiboVZm8oahGO3AQ7axYPnt-B7a9aRMPSAhXdiTfpQPZI/exec",
+                        data: {
+                            "name": vm.name,
+                            "phone": vm.phone,
+                            "industry": vm.industry,
+                            "company": vm.company,
+                            "email": vm.email,
+                            "content": vm.content
+                        },
+                        success: function (response) {
+                            if (response == "成功") {
+                                alert("成功");
+                            }
+                        },
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
