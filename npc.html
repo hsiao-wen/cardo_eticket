@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardo</title>
+</head>
+<body>
+  <!-- 正式機 -->
+  <h2>Loading...</h2>
+
+  <script>
+
+    // 1. 分割時間點
+    const cuttime = new Date('2022/8/1');
+
+    let q = location.search;
+    const datetime = new Date();
+    
+    let url = 'https://m.yfpcardo.com'
+
+    if ( datetime < cuttime ) {
+      // 2. 在 分割時間點 前 的 券村商品網址
+      url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX19NFMY3E2pe9Gyms314x77rLcardoweK+tSG4s=' ;
+    } else {
+      // 3. 在 分割時間點 後 的 券村商品網址
+      url = 'https://m.yfpcardo.com/#/shoppage/64' ;
+    }
+    url = url + q ;
+
+    // alert(url);
+    window.location = url;
+
+  </script>
+</body>
+  
+</html>

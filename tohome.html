@@ -1,0 +1,80 @@
+<html>
+<!-- 跳轉APP 首頁 或 WEB首頁 -->
+<!-- https://eticket.yfpcardo.com/tohome.html?channel=券村 -->
+<!-- https://eticket.yfpcardo.com/tohome.html?channel=小農村 -->
+
+<head>
+  <meta    http-equiv="Content-Type"    content="text/html; charset=UTF-8"  />
+  <title>Cardo</title>
+  <script>
+
+    function getRequests() {
+        var s1 = location.search.substring(1, location.search.length).split('&'),
+            r = {}, s2, i;
+        for (i = 0; i < s1.length; i += 1) {
+            s2 = s1[i].split('=');
+            r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+        }
+        return r;
+    };
+
+    var QueryString = getRequests();
+
+    let channel = '券村';
+    let webURL = '';
+    if( QueryString['channel'] == '券村') {
+      channel = '券村';
+    } else if (QueryString['channel'] == '小農村') {
+      channel = '小農村';
+      webURL = 'myfarm/'
+    }
+
+    // https://m.yfpcardo.com/#/home
+    // https://m.yfpcardo.com/#/myfarm/home
+    var Web = "https://m.yfpcardo.com/#/" + webURL + "home";
+    // yfpcoupon://?action=home&channel=券村
+    // yfpcoupon://?action=home&channel=小農村
+    var appURL = "yfpcoupon://?action=home&channel=" + channel;
+
+    function onLoad() {
+      if (navigator.userAgent.match(/Android/)) {
+        if (navigator.userAgent.match(/Chrome/)) {
+          // Jelly Bean with Chrome browser
+          setTimeout(function () {
+            if (!document.webkitHidden)
+              window.location = Web;
+          }, 2000);
+          window.location = appURL;
+        } else {
+          // Older Android browser
+          var iframe = document.createElement("iframe");
+          iframe.style.border = "none";
+          iframe.style.width = "1px";
+          iframe.style.height = "1px";
+          var t = setTimeout(function () {
+            window.location = Web;
+          }, 1000);
+          iframe.onload = function () { clearTimeout(t) };
+          iframe.src = appURL;
+          document.body.appendChild(iframe);
+        }
+      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
+        // IOS
+        setTimeout(function () {
+          if (!document.webkitHidden)
+            window.location = Web;
+        }, 25);
+        window.location = appURL;
+      } else {
+        window.location = Web;
+      }
+    }
+
+  </script>
+</head>
+
+<body onLoad="onLoad()">
+  <h2>Loading...</h2>
+</body>
+
+</html>
