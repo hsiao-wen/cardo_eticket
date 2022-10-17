@@ -13,21 +13,23 @@
   <script>
 
     // 1. 分割時間點
-    const cuttime = new Date('2022/8/1');
+    const cuttime = new Date('2022/10/1');
 
     let q = location.search;
+    const gaSource = '&utm_source=sinopacAI&utm_medium=referral&utm_campaign=sinopacMI'
     const datetime = new Date();
     
     let url = 'https://m.yfpcardo.com'
 
     if ( datetime < cuttime ) {
       // 2. 在 分割時間點 前 的 券村商品網址
-      url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX19NFMY3E2pe9Gyms314x77rLcardoweK+tSG4s=' ;
+      url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX1+vXO87Dc6Bzw7uy+KebNlScardo3prSa+O0hU=' ;
     } else {
-      // 3. 在 分割時間點 後 的 券村商品網址
-      url = 'https://m.yfpcardo.com/#/shoppage/64' ;
+      // 3. 在 分割時間點 後(含) 的 券村商品網址
+      url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX1+n+sqCMSKc7gLzuVVfYfKhTaP2f74XIOE=' ;
+      
     }
-    url = url + q ;
+    url = url + q + gaSource;
 
     window.location = url;
 

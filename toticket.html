@@ -1,10 +1,11 @@
 <html>
-<!-- 跳轉APP 首頁 或 WEB首頁 -->
-<!-- https://eticket.yfpcardo.com/tohome.html?channel=券村 -->
-<!-- https://eticket.yfpcardo.com/tohome.html?channel=小農村 -->
+<!-- 跳轉APP商品頁 或 WEB商品頁 -->
+<!-- https://eticket.yfpcardo.com/toticket.html?id=1820&channel=券村 -->
+<!-- https://eticket.yfpcardo.com/toticket.html?id=1761&channel=小農村 -->
 
 <head>
   <meta    http-equiv="Content-Type"    content="text/html; charset=UTF-8"  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
   <title>Cardo</title>
   <script>
 
@@ -17,24 +18,16 @@
         }
         return r;
     };
-
+    
     var QueryString = getRequests();
 
-    let channel = '券村';
-    let webURL = '';
-    if( QueryString['channel'] == '券村') {
-      channel = '券村';
-    } else if (QueryString['channel'] == '小農村') {
-      channel = '小農村';
-      webURL = 'myfarm/'
-    }
+    let id = QueryString['id']
+    let encryptedData = CryptoJS.AES.encrypt(id, 'cardo').toString();
+    let encryptedDataId = encryptedData.replace(/\//,'cardo');
 
-    // https://m.yfpcardo.com/#/home
-    // https://m.yfpcardo.com/#/myfarm/home
-    var Web = "https://m.yfpcardo.com/#/" + webURL + "home" + location.search;
-    // yfpcoupon://?action=home&channel=券村
-    // yfpcoupon://?action=home&channel=小農村
-    var appURL = "yfpcoupon://?action=home&channel=" + channel;
+
+    var Web = "https://m.yfpcardo.com/#/ticketdetail/shop/" + encryptedDataId + location.search;
+    var appURL = "yfpcoupon://app?ticket_id="+QueryString["id"]+"&channel="+QueryString["channel"]+"&action=ticket";
 
     function onLoad() {
       if (navigator.userAgent.match(/Android/)) {

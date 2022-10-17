@@ -19,7 +19,7 @@
     };
     
     var QueryString = getRequests();
-    var Web = "https://m.yfpcardo.com/#/shoppage/" + QueryString['id'];
+    var Web = "https://m.yfpcardo.com/#/shoppage/" + QueryString['id'] + location.search;
     var appURL = "yfpcoupon://?action=store&store_id=" + QueryString['id'] + "&channel=" + QueryString['channel'];
 
     function onLoad() {
