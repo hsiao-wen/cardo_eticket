@@ -2,6 +2,8 @@
 <!-- 跳轉APP 首頁 或 WEB首頁 -->
 <!-- https://eticket.yfpcardo.com/tohome.html?channel=券村 -->
 <!-- https://eticket.yfpcardo.com/tohome.html?channel=小農村 -->
+<!-- https://eticket.yfpcardo.com/tohome.html?channel=cardo -->
+<!-- https://eticket.yfpcardo.com/tohome.html?channel=myfarm -->
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -31,9 +33,9 @@
 
     let channel = '券村';
     let webURL = '';
-    if( QueryString['channel'] == '券村') {
+    if( QueryString['channel'] == '券村' || QueryString['channel'] == 'cardo') {
       channel = '券村';
-    } else if (QueryString['channel'] == '小農村') {
+    } else if (QueryString['channel'] == '小農村' || QueryString['channel'] == 'myfarm') {
       channel = '小農村';
       webURL = 'myfarm/'
     }
