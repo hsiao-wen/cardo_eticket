@@ -34,7 +34,7 @@
 
     let id = QueryString['id']
     let encryptedData = CryptoJS.AES.encrypt(id, 'cardo').toString();
-    let encryptedDataId = encryptedData.replace(/\//,'cardo');
+    let encryptedDataId = encryptedData.replace(/\//g,'cardo');
 
     let channel = '券村';
     if( QueryString['channel'] == '券村' || QueryString['channel'] == 'cardo') {

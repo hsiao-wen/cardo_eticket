@@ -13,12 +13,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="max-age=0">
   <title>Cardo NPC</title>
   <script>
     function onLoad() {
       
       // 1. 分割時間點
-      const cuttime = new Date('2022/11/1');
+      const cuttime = new Date('2023/3/1');
 
       let q = location.search;
       const gaSource = '&utm_source=sinopacAI&utm_medium=referral&utm_campaign=sinopacMI'
@@ -27,11 +29,10 @@
 
       if ( datetime < cuttime ) {
         // 2. 在 分割時間點 前 的 券村商品網址
-        url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX1+n+sqCMSKc7gLzuVVfYfKhTaP2f74XIOE=' ;
+        url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX18WPO4hsMfDAcxANbOkktFY9uCx5l80K+s=' ;
       } else {
         // 3. 在 分割時間點 後(含) 的 券村商品網址
-        url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX1+evFWYLSrT1wKLSRtcrxkKdMExBJC6mLk=' ;
-
+        url = 'https://m.yfpcardo.com/#/ticketdetail/shop/U2FsdGVkX18wyXBOxnDHxQwf7SvChY2nkGDQkWGOqpo=' ;
       }
       url = url + q + gaSource;
 
